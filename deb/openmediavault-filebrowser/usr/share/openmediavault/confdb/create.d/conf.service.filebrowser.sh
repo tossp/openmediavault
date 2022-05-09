@@ -30,6 +30,7 @@ set -e
 #     <filebrowser>
 #       <enable>0|1</enable>
 #       <port>3670</port>
+#       <sslcertificateref></sslcertificateref>
 #       <sharedfolderref></sharedfolderref>
 #     </filebrowser>
 #   </services>
@@ -39,6 +40,7 @@ if ! omv_config_exists "/config/services/filebrowser"; then
 	omv_config_add_node "/config/services" "filebrowser"
 	omv_config_add_key "/config/services/filebrowser" "enable" "0"
 	omv_config_add_key "/config/services/filebrowser" "port" "3670"
+	omv_config_add_key "/config/services/filebrowser" "sslcertificateref" ""
 	omv_config_add_key "/config/services/filebrowser" "sharedfolderref" ""
 fi
 
